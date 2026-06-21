@@ -1,0 +1,50 @@
+ body {
+    font-family:  Arial, sans-serif;
+        margin: 0;
+    padding: 0;
+}
+table{
+    width:100%;
+    border collapse: collapse;
+}
+th{
+    border:1px solid blue
+}
+td{
+    border:1px solid lightblue
+}
+form {
+    text-align: center;
+    margin : 50px auto;
+    padding :10px;
+    border : 1px solid lightgreen;
+background-color: lightgreen;
+border-radius : 10px;
+width: 500px;
+}
+input {
+    margin: 10px;
+    padding: 5px;
+    width : 200 px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: left;
+}
+textarea{
+    margin: 20px;
+    padding: 5px;
+    width: 400px;
+    height:100px;
+}
+button{
+    margin:10 px;
+    padding:5px 20 px;
+     height: 200px;
+
+}
