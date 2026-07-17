@@ -1,0 +1,74 @@
+<html> 
+    <head>
+        <title>student registration</title>
+        <link rel="stylesheet" href="c.css">
+    </head>
+    <body>
+        <h2>Student registration form</h2>
+        <form onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td><label for="firstname">First Name:</label></td>
+                    <td><input type="text" id="firstname" name="firstname"></td>
+                </tr>
+                <tr>
+                    <td><label for="lastname">Last Name:</label></td>
+                    <td><input type="text" id="lastname" name="lastname"></td>
+                </tr>
+                <tr>
+                    <td><label for="id">ID:</label></td>
+                    <td><input type="text" id="id" name="id"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="text" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="creditcompleted">Credit Completed:</label></td>
+                    <td><input type="text" id="creditcompleted" name="creditcompleted"></td>
+                </tr>
+                <tr>
+                    <td><label for="department">Department:</label></td>
+                    <td><input type="text" id="department" name="department"></td>
+                </tr>
+                           </table>
+                           <button type="submit" >submit</button>
+        </form>
+        <script>
+            function validateForm(){
+                var firstname=document.getElementById("firstname").value;
+                var lastname=document.getElementById("lastname").value;
+                var id=document.getElementById("id").value;
+                var email=document.getElementById("email").value;
+                var creditcompleted=document.getElementById("creditcompleted").value;
+                var department=document.getElementById("department").value;
+    if(firstname == "" ){
+        alert("First name cannot be empty");
+        return false;
+    }
+    if(lastname == "" ){
+    alert("Last name cannot be empty") ;    
+return false;
+            }
+            if(id.indexOf("-")==-1){
+            alert("ID must contain -");
+            return false;
+        }
+            if(department == "" ){
+                alert("Department is required");
+                return false;
+            }
+            if(email.indexOf("@student.aiub.edu")== -1){
+                alert("Email must contain @student.aiub.edu");
+return false;
+            }
+            if(creditcompleted< 0|| creditcompleted>= 148){
+                alert("credit completed must be between 0 and 147");
+                return false;
+            }
+            return true;
+        }
+                    </script>
+
+    </body>
+</html>
